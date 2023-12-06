@@ -42,6 +42,10 @@ Quedaría tal que así:
 
 # Configuración de cada una de ellas
 
-Copiamos nuestra clave en 
+Copiamos nuestra clave en la máquina y le añadimos el nombre *admin@adminpuente*
+
+![5](https://github.com/Pablorc222/Balanceador/assets/146434694/84048dc3-6bad-4bc0-a91b-67e85586a223)
+
+
 
 
