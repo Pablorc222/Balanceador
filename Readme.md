@@ -1,4 +1,4 @@
-# {Balanceador de carga con una infractuctura LAMP en tres niveles}
+# Balanceador de carga con una infractuctura LAMP en tres niveles.
 
 # Índice
 1. [Introducción](#introducción)
@@ -35,3 +35,8 @@ Necesitamos una IP elástica para asignársela al balanceador. Nos metemos en VP
 Montamos nuestra estructura de cuatro máquinas. El balanceador de carga será una de ellas, dos servidores y web y por último una para nuestra base de datos.
 El balanceador será la subred pública y las otras privadas. En el menú de servicios AWS, selecciona EC2. Haz clic en Lanzar instancias para acceder al menú de creación de instancias.
 Aquí nombramos nuestras instancias y ponemos las diferentes etiquetas.
+![3](https://github.com/Pablorc222/Balanceador/assets/146434694/511739ee-f2fc-4a29-8180-13feb337a4b5)
+
+Quedaría tal que así:
+
+
