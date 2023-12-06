@@ -38,5 +38,10 @@ Aquí nombramos nuestras instancias y ponemos las diferentes etiquetas.
 ![3](https://github.com/Pablorc222/Balanceador/assets/146434694/511739ee-f2fc-4a29-8180-13feb337a4b5)
 
 Quedaría tal que así:
+![4](https://github.com/Pablorc222/Balanceador/assets/146434694/d15262d5-6c6f-4a25-b61b-91e9f5a15904)
+
+# Configuración de cada una de ellas
+
+Copiamos nuestra clave en 
 
 
