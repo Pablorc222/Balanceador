@@ -42,7 +42,8 @@ Aquí nombramos nuestras instancias y ponemos las diferentes etiquetas.
 
 Quedaría tal que así:
 
-4
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/f10b3da1-f83f-41db-bb97-c08b19f89ac5)
+
 
 # Configuración de cada una de ellas
 
@@ -50,16 +51,20 @@ Quedaría tal que así:
 
   Primero realizamos lo que hacemos siempre al instalar apache, actualizar repositorios, installar apache y módulos php.
 
-7
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/62db06dd-a4a5-47a9-9ec6-17be7f1e55ef)
+
   
  Modificamos el archivo
   
-8
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/4cf9649b-4e34-4154-92ed-ff1ba0e83d46)
+
 Activamos manualmente el proxy
-9
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/38522604-4031-469f-97aa-8e678002de5a)
+
 
 Reiniciamos nuestro servidor apache
-10
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/89c4e1bb-cc2a-4144-86f7-cf7cabfb790f)
+
 
  1.Instalamos Git en tu sistema.
  2.Creamos una carpeta para tu aplicación.
@@ -67,53 +72,61 @@ Reiniciamos nuestro servidor apache
  4.Clona el repositorio utilizando el comando git clone <URL_del_repositorio>
 
 
-11
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/28e9bfac-0582-4755-bfa6-e5258ecc9fec)
+
 
 Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relacionadas con la configuración de la base de datos. Editamos las variables como DB_HOST, DB_USER, y otros para reflejar la información de conexión correcta.
 
-12
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/acc94ce2-5bb8-48a7-8f39-aacefc0bd481)
+
 
 Le damos la propiedad de nuestros archivos al usuario apache y reinicimaos el servicio.
 
-13
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/8cffe856-ae38-4d99-9b80-ee4d82d02af9)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/074f2622-f520-4242-b6af-4768515853a2)
+
 
 Seguimos realizando las tareas que hacemos habitualmente al hacer este tipo de proyectos, instalar el cliente mariadb y copiar la base de datos.
 
-14 15
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/432aeb41-96c4-411e-92e7-34c75aa68995)
+
 
 
 
 #### MySQL
 
 Primero actualizamos repositorios e instalamos nuestro servidor mariadb
-16
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/de190473-890e-4b08-9a22-436fc750df61)
+
 
 Editamos el fichero
-17
-Creamos usuario y los permisos
-16
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/3586c146-1924-4f20-bb61-f5ae02b9e403)
 
-EL puerto que escucha maria db es 
+Copiamos nuestro archivo
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/0a99478a-c45c-4467-9110-669e416f513f)
 
-
-Vemos si la conexión va
 
 
 #### Balanceador
 
 Le añadimos nuestra IP elástica
-17
 
 Instalamos el servidor apache y activamos todos sus módulos
-18
-
 Estas son las proxys que le tenemos que añadir al archivo:
-19
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/2ba1721a-8764-462a-8c1f-65d5c49d574b)
+
 
 Activamos nuestro módulo y reiniciamos el servicio.
-20.
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b8416778-761e-4207-8ef4-e8f00423a0ee)
+
 
 
 # Certificado
 
 Utilizamos My No-IP y creamos nuestro dominio, asociándolo a nuestra IP elástica.
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/629ab8fd-3b6e-460a-893f-b5ac4ca2896a)
+
+# Conclusión
+
+Nuestra tabla quedaría asi:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/50afb5d9-531b-4b07-856c-f19e1bccb3ed)
