@@ -129,4 +129,5 @@ Utilizamos My No-IP y creamos nuestro dominio, asociándolo a nuestra IP elásti
 # Conclusión
 
 Nuestra tabla quedaría asi:
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/50afb5d9-531b-4b07-856c-f19e1bccb3ed)
+
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/15923c95-d4a6-4167-9c47-a109a17d7abf)
