@@ -80,7 +80,7 @@ Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relac
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/acc94ce2-5bb8-48a7-8f39-aacefc0bd481)
 
 
-Le damos la propiedad de nuestros archivos al usuario apache y reinicimaos el servicio.
+Le damos la propiedad de nuestros archivos al usuario apache y reiniciamos el servicio.
 
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/8cffe856-ae38-4d99-9b80-ee4d82d02af9)
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/074f2622-f520-4242-b6af-4768515853a2)
