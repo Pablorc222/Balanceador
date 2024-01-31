@@ -36,20 +36,16 @@ Necesitamos una IP elástica para asignársela al balanceador. Nos metemos en VP
 
 Montamos nuestra estructura de cuatro máquinas. El balanceador de carga será una de ellas, dos servidores y web y por último una para nuestra base de datos.
 El balanceador será la subred pública y las otras privadas. En el menú de servicios AWS, selecciona EC2. Haz clic en Lanzar instancias para acceder al menú de creación de instancias.
-Aquí nombramos nuestras instancias y ponemos las diferentes etiquetas.
+Aquí nombramos nuestras instancias y ponemos las diferentes etiquetas. Quedaría tal que así:
 
-![3](https://github.com/Pablorc222/Balanceador/assets/146434694/511739ee-f2fc-4a29-8180-13feb337a4b5)
-
-Quedaría tal que así:
-
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/f10b3da1-f83f-41db-bb97-c08b19f89ac5)
+![image](<img width="823" alt="image" src="https://github.com/Pablorc222/Balanceador/assets/146434694/d652c35c-2999-4d88-86bf-3faddd9dfcef">)
 
 
 # Configuración de cada una de ellas
 
   #### Servidores Apache
 
-  Primero realizamos lo que hacemos siempre al instalar apache, actualizar repositorios, installar apache y módulos php.
+  Primero realizamos lo que hacemos siempre al instalar apache, actualizar repositorios, instalar apache y módulos php.
 
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/62db06dd-a4a5-47a9-9ec6-17be7f1e55ef)
 
