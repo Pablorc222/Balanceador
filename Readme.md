@@ -105,9 +105,11 @@ sudo apt-get install apache2 git
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/d4ef4eeb-f483-4e74-ac52-edcf7288b897)
 
 Seguidamente hacemos esto:
+
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/68fff05b-f669-4fc1-967d-f9be4be2f476)
 
 Luego hacemos una copia del fichero 000-default.conf en /etc/apache2/sites-available:
+
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/8dffb2fe-1de9-45bc-997e-d5e1984a26ec)
 
 
