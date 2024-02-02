@@ -53,7 +53,7 @@ Mysql:
 
 # Configuración de cada una de ellas
 
-  #### Servidores Webs
+  #### Servidor Apache
 
   Primero realizamos lo que hacemos siempre al instalar apache, actualizar repositorios, instalar apache y módulos php.
 
@@ -71,6 +71,18 @@ Mysql:
 Activamos manualmente el proxy
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/7fc465fb-b25d-4e57-8666-df35bc85a1fd)
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/d7fd97c9-1be5-4190-ba3c-7b324830f728)
+Le añadimos nuestra IP elástica
+
+Instalamos el servidor apache y activamos todos sus módulos.
+Hacemos copia de nuestro archivo:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/c19e5c64-66c3-4c9a-99d3-c1b5f8753978)
+
+Estas son las proxys que le tenemos que añadir al archivo:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/2ba1721a-8764-462a-8c1f-65d5c49d574b)
+
+
+Activamos nuestro módulo y reiniciamos el servicio.
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b8416778-761e-4207-8ef4-e8f00423a0ee)
 
 
 Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relacionadas con la configuración de la base de datos. Editamos las variables como DB_HOST, DB_USER, y otros para reflejar la información de conexión correcta.
@@ -96,18 +108,7 @@ Copiamos nuestro archivo
 
 #### Balanceador
 
-Le añadimos nuestra IP elástica
 
-Instalamos el servidor apache y activamos todos sus módulos.
-Hacemos copia de nuestro archivo:
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/c19e5c64-66c3-4c9a-99d3-c1b5f8753978)
-
-Estas son las proxys que le tenemos que añadir al archivo:
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/2ba1721a-8764-462a-8c1f-65d5c49d574b)
-
-
-Activamos nuestro módulo y reiniciamos el servicio.
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b8416778-761e-4207-8ef4-e8f00423a0ee)
 
 
 
