@@ -73,12 +73,6 @@ Activamos manualmente el proxy
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/d7fd97c9-1be5-4190-ba3c-7b324830f728)
 
 
-
-
-Reiniciamos nuestro servidor apache
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/89c4e1bb-cc2a-4144-86f7-cf7cabfb790f)
-
-
 Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relacionadas con la configuración de la base de datos. Editamos las variables como DB_HOST, DB_USER, y otros para reflejar la información de conexión correcta.
 
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b622e5bd-9229-4356-9281-8fc7f38ac993)
