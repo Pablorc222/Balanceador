@@ -53,14 +53,12 @@ Mysql:
 
 # Configuración de cada una de ellas
 
-  #### Servidor Apache
+  #### Balanceador
 
   Primero realizamos lo que hacemos siempre al instalar apache, actualizar repositorios, instalar apache y módulos php.
 
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/1bc9bc50-fc5c-4020-bee6-1ac6703dbd62)
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/25f8f999-6952-4688-b965-46329fdd8b79)
-
-
   
  Modificamos el archivo
   
@@ -71,20 +69,9 @@ Mysql:
 Activamos manualmente el proxy
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/7fc465fb-b25d-4e57-8666-df35bc85a1fd)
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/d7fd97c9-1be5-4190-ba3c-7b324830f728)
-Le añadimos nuestra IP elástica
 
-Instalamos el servidor apache y activamos todos sus módulos.
-Hacemos copia de nuestro archivo:
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/c19e5c64-66c3-4c9a-99d3-c1b5f8753978)
-
-
-
-
-Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relacionadas con la configuración de la base de datos. Editamos las variables como DB_HOST, DB_USER, y otros para reflejar la información de conexión correcta.
-
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b622e5bd-9229-4356-9281-8fc7f38ac993)
-
-
+Le añadimos nuestro dominio al balanceador:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/8afa258a-4008-4d09-908c-798c48da0681)
 
 #### MySQL
 
@@ -101,11 +88,32 @@ Copiamos nuestro archivo
 
 
 
-#### Balanceador
+
+#### Servidores Webs
+
+# Paso 1: Enviar clave desde el balanceador
+scp -i "ruta_de_la_clave.pem" clave_ssh.pem usuario@direccion_ip_instancia:/ruta_en_instancia/
+
+# Paso 2: Conectar vía SSH y configurar grupos de seguridad
+ssh -i "ruta_de_la_clave.pem" usuario@direccion_ip_instancia
+
+# Configurar grupos de seguridad para permitir acceso a Internet
+# Descargar Apache y el paquete Git
+sudo apt-get update
+sudo apt-get install apache2 git
+
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/d4ef4eeb-f483-4e74-ac52-edcf7288b897)
+
+Seguidamente hacemos esto:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/68fff05b-f669-4fc1-967d-f9be4be2f476)
+
+Luego hacemos una copia del fichero 000-default.conf en /etc/apache2/sites-available:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/8dffb2fe-1de9-45bc-997e-d5e1984a26ec)
 
 
+Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relacionadas con la configuración de la base de datos. Editamos las variables como DB_HOST, DB_USER, y otros para reflejar la información de conexión correcta.
 
-
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b622e5bd-9229-4356-9281-8fc7f38ac993)
 
 # Certificado
 
