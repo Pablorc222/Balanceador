@@ -38,61 +38,58 @@ Montamos nuestra estructura de cuatro máquinas. El balanceador de carga será u
 El balanceador será la subred pública y las otras privadas. En el menú de servicios AWS, selecciona EC2. Haz clic en Lanzar instancias para acceder al menú de creación de instancias.
 Aquí nombramos nuestras instancias y ponemos las diferentes etiquetas. Quedaría tal que así:
 
-![image](<img width="823" alt="image" src="https://github.com/Pablorc222/Balanceador/assets/146434694/d652c35c-2999-4d88-86bf-3faddd9dfcef">)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/58441371-035f-4ad7-a589-811ac8cb31ce)
+
+Estas son las reglas de entrada de cada una de las máquinas:
+Balanceador:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/3acd0d8a-fc7b-44c6-8aa0-95d0837a3be8)
+
+Webs:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/fda72e21-2f16-43fb-894c-c4b4e63ce743)
+
+Mysql:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/4d2311f0-95ae-4246-a84e-10b204a4f778)
 
 
 # Configuración de cada una de ellas
 
-  #### Servidores Apache
+  #### Servidores Webs
 
   Primero realizamos lo que hacemos siempre al instalar apache, actualizar repositorios, instalar apache y módulos php.
 
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/62db06dd-a4a5-47a9-9ec6-17be7f1e55ef)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/1bc9bc50-fc5c-4020-bee6-1ac6703dbd62)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/25f8f999-6952-4688-b965-46329fdd8b79)
+
 
   
  Modificamos el archivo
   
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/4cf9649b-4e34-4154-92ed-ff1ba0e83d46)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/826d1270-b653-4553-9271-1525adcfda74)
+
 
 Activamos manualmente el proxy
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/38522604-4031-469f-97aa-8e678002de5a)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/7fc465fb-b25d-4e57-8666-df35bc85a1fd)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/d7fd97c9-1be5-4190-ba3c-7b324830f728)
+
+
 
 
 Reiniciamos nuestro servidor apache
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/89c4e1bb-cc2a-4144-86f7-cf7cabfb790f)
 
 
- 1.Instalamos Git en tu sistema.
- 2.Creamos una carpeta para tu aplicación.
- 3.En la terminal, navega a la carpeta recién creada.
- 4.Clona el repositorio utilizando el comando git clone <URL_del_repositorio>
-
-
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/28e9bfac-0582-4755-bfa6-e5258ecc9fec)
-
-
 Encontramos y abrimos config.php en la aplicación. Buscamos las secciones relacionadas con la configuración de la base de datos. Editamos las variables como DB_HOST, DB_USER, y otros para reflejar la información de conexión correcta.
 
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/acc94ce2-5bb8-48a7-8f39-aacefc0bd481)
-
-
-Le damos la propiedad de nuestros archivos al usuario apache y reiniciamos el servicio.
-
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/8cffe856-ae38-4d99-9b80-ee4d82d02af9)
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/074f2622-f520-4242-b6af-4768515853a2)
-
-
-Seguimos realizando las tareas que hacemos habitualmente al hacer este tipo de proyectos, instalar el cliente mariadb y copiar la base de datos.
-
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/432aeb41-96c4-411e-92e7-34c75aa68995)
-
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/b622e5bd-9229-4356-9281-8fc7f38ac993)
 
 
 
 #### MySQL
 
 Primero actualizamos repositorios e instalamos nuestro servidor mariadb
-![image](https://github.com/Pablorc222/Balanceador/assets/146434694/de190473-890e-4b08-9a22-436fc750df61)
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/eaabc5c6-8244-44ef-865b-fecc28a33a1d)
+
 
 
 Editamos el fichero
@@ -107,7 +104,10 @@ Copiamos nuestro archivo
 
 Le añadimos nuestra IP elástica
 
-Instalamos el servidor apache y activamos todos sus módulos
+Instalamos el servidor apache y activamos todos sus módulos.
+Hacemos copia de nuestro archivo:
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/c19e5c64-66c3-4c9a-99d3-c1b5f8753978)
+
 Estas son las proxys que le tenemos que añadir al archivo:
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/2ba1721a-8764-462a-8c1f-65d5c49d574b)
 
@@ -125,5 +125,8 @@ Utilizamos My No-IP y creamos nuestro dominio, asociándolo a nuestra IP elásti
 # Conclusión
 
 Nuestra tabla quedaría asi:
-
+![image](https://github.com/Pablorc222/Balanceador/assets/146434694/fb69ae65-c155-41df-8f92-b4c7de632efb)
 ![image](https://github.com/Pablorc222/Balanceador/assets/146434694/15923c95-d4a6-4167-9c47-a109a17d7abf)
+
+Me ha resultado dificil y muy desastrosa, después de tener todo y probarlo me meto en mis máquinas y me ponen que no puedo hacer a ellas por ssh fallo en el puerto 22, tengo todo bien configurado y antes me iba perfectamente.
+
