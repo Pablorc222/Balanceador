@@ -91,14 +91,14 @@ Copiamos nuestro archivo
 
 #### Servidores Webs
 
-# Paso 1: Enviar clave desde el balanceador
+* Paso 1: Enviar clave desde el balanceador
 scp -i "ruta_de_la_clave.pem" clave_ssh.pem usuario@direccion_ip_instancia:/ruta_en_instancia/
 
-# Paso 2: Conectar vía SSH y configurar grupos de seguridad
+* Paso 2: Conectar vía SSH y configurar grupos de seguridad
 ssh -i "ruta_de_la_clave.pem" usuario@direccion_ip_instancia
 
-# Configurar grupos de seguridad para permitir acceso a Internet
-# Descargar Apache y el paquete Git
+* Configurar grupos de seguridad para permitir acceso a Internet
+* Descargar Apache y el paquete Git
 sudo apt-get update
 sudo apt-get install apache2 git
 
